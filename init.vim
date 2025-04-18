@@ -15,12 +15,14 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'jaredgorski/spacecamp'
 Plug 'lervag/vimtex'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', {'tag': '0.1.8'}
 
 call plug#end()
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
-let g:vimte_view_general_viewer = '{$SumatraPDF}'
+let g:vimtex_view_general_viewer = '{$SumatraPDF}'
 let g:vimtex_view_general_options = '-reuse-instance @pdf'
 let g:vimtex_view_general_options_latexmk = '-reuse-instance'
 let g:vimtex_compiler_method = "latexmk"
