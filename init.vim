@@ -27,6 +27,13 @@ let g:vimtex_view_general_options = '-reuse-instance @pdf'
 let g:vimtex_view_general_options_latexmk = '-reuse-instance'
 let g:vimtex_compiler_method = "latexmk"
 
+" Vim-telescope config
+" Find files using Telescope command-line sugar.
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
 filetype plugin on
 syntax enable
 
