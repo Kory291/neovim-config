@@ -14,18 +14,16 @@ Plug 'https://github.com/vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 Plug 'jaredgorski/spacecamp'
-Plug 'lervag/vimtex'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'https://github.com/tpope/vim-commentary'
 Plug 'nvim-telescope/telescope.nvim', {'tag': '0.1.8'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'neanias/everforest-nvim', { 'branch': 'main' }
 
 call plug#end()
 
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
-let g:vimtex_view_general_viewer = '{$SumatraPDF}'
-let g:vimtex_view_general_options = '-reuse-instance @pdf'
-let g:vimtex_view_general_options_latexmk = '-reuse-instance'
-let g:vimtex_compiler_method = "latexmk"
 
 " add or override pattern matches for filetypes
 " these take precedence over the file extensions
@@ -42,6 +40,8 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 filetype plugin on
-syntax enable
+filetype plugin indent on
 
-colorscheme spacecamp
+colorscheme everforest
+
+lua require'nvim-treesitter.configs'.setup{highlight={enable=true}} 
