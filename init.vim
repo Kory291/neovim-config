@@ -18,7 +18,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'https://github.com/tpope/vim-commentary'
 Plug 'nvim-telescope/telescope.nvim', {'tag': '0.1.8'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'neanias/everforest-nvim', { 'branch': 'main' }
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 call plug#end()
 
@@ -42,6 +42,6 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 filetype plugin on
 filetype plugin indent on
 
-colorscheme everforest
+colorscheme catppuccin-frappe " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 
 lua require'nvim-treesitter.configs'.setup{highlight={enable=true}} 
