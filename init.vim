@@ -16,6 +16,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'jaredgorski/spacecamp'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'https://github.com/tpope/vim-commentary'
+Plug 'https://github.com/neovim/nvim-lspconfig'
 Plug 'nvim-telescope/telescope.nvim', {'tag': '0.1.8'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
@@ -41,6 +42,10 @@ nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 filetype plugin on
 filetype plugin indent on
+
+lua vim.lsp.enable('pyright')
+lua vim.lsp.enable('bashls')
+lua vim.lsp.enable('clangd')
 
 colorscheme catppuccin-frappe " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 
