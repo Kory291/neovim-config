@@ -46,6 +46,7 @@ filetype plugin indent on
 lua vim.lsp.enable('pyright')
 lua vim.lsp.enable('bashls')
 lua vim.lsp.enable('clangd')
+lua vim.lsp.enable('ansiblels')
 
 colorscheme catppuccin-frappe " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 
