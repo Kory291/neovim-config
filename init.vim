@@ -17,9 +17,12 @@ Plug 'jaredgorski/spacecamp'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'https://github.com/tpope/vim-commentary'
 Plug 'https://github.com/neovim/nvim-lspconfig'
+Plug 'yaegassy/coc-ansible', {'do': 'yarn install --frozen-lockfile'}
+Plug 'pearofducks/ansible-vim', { 'do': './UltiSnips/generate.sh' }
 Plug 'nvim-telescope/telescope.nvim', {'tag': '0.1.8'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -49,5 +52,7 @@ lua vim.lsp.enable('clangd')
 lua vim.lsp.enable('ansiblels')
 
 colorscheme catppuccin-frappe " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+
+let g:coc_filetype_map = {'yaml.ansible': 'ansible'}
 
 lua require'nvim-treesitter.configs'.setup{highlight={enable=true}} 
