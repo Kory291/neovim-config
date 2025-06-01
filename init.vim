@@ -23,6 +23,7 @@ Plug 'nvim-telescope/telescope.nvim', {'tag': '0.1.8'}
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'https://github.com/mfussenegger/nvim-ansible'
 
 call plug#end()
 
